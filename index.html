@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>Ground-A-Score</title>
+  <link rel="icon" type="image/x-icon" href="">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,27 +52,27 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
+            <h1 class="title is-1 publication-title">Ground-A-Score</h1>
+            <div class="is-size-4 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://scholar.google.com/citations?user=VvJxxzAAAAAJ=en&user=VvJxxzAAAAAJ" target="_blank">Hangeol Chang</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://scholar.google.com/citations?hl=en&user=GrHZicUAAAAJ" target="_blank">Jinho Chang</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://scholar.google.co.kr/citations?user=HNMjoNEAAAAJ&hl=enK" target="_blank">Jong Chul Ye</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block">KAIST(Korea Advanced Institute of Science and Technology)
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
                   <div class="column has-text-centered">
-                    <div class="publication-links">
+                    <!--div class="publication-links"-->
                          <!-- Arxiv PDF link -->
-                      <span class="link-block">
+                      <!--span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -80,10 +80,10 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span>-->
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!--span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,7 +91,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span>-->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -122,30 +122,27 @@
   </div>
 </section>
 
+<section class="section hero light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <img src="static/images/main.png" alt="Key observation"/>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-<!-- End teaser video -->
+  </section>
+
+
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-4">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Despite recent advancements in text-to-image diffusion models facilitating various image editing techniques, complex text prompts often lead to an oversight of some requests due to a bottleneck in processing text information. To tackle this challenge, we present Ground-A-Score, a simple yet powerful model-agnostic image editing method by incorporating grounding during score distillation. This approach ensures a precise reflection of intricate prompt requirements in the editing outcomes, taking into account the prior knowledge of the object locations within the image. Moreover, the selective application with a new penalty coefficient and contrastive loss helps to precisely target editing areas while preserving the integrity of the objects in the source image. Both qualitative assessments and quantitative analyses confirm that Ground-A-Score successfully adheres to the intricate details of extended and multifaceted prompts, ensuring high-quality outcomes that respect the original image attributes.
@@ -158,38 +155,54 @@
 <!-- End paper abstract -->
 
 
+<!-- Main Idea -->
+<section class="section hero light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4">Main Idea</h2>
+          <div class="content has-text-justified">
+            <img src="static/images/method1.png" alt="method1"/>
+            <p>
+            </br> We leverage the prior knowledge from the multimodal LLM and the
+            zero-shot grounding model to break down the user request into multiple image editing
+            subtasks for a single entity.
+            </p>
+            <img src="static/images/method2.png" alt="method2"/>
+            <p>
+                A pre-trained text-to-image diffusion model is used for
+                each subtask to obtain a corresponding gradient for the source image. These gradients
+                are masked and aggregated to get a total gradient that is efficient and stable.
+            </p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <div class="container">
+          <h2 class="title is-4"></br>Additional Results</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
+        <img src="static/images/sub1.png" alt="MY ALT TEXT"/>
+        <!--h2 class="subtitle has-text-centered">
           First image description.
-        </h2>
+        </h2>-->
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
+        <img src="static/images/sub2.png" alt="MY ALT TEXT"/>
+        <!--h2 class="subtitle has-text-centered">
           Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
+        </h2>-->
      </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
 </div>
@@ -198,90 +211,6 @@
 <!-- End image carousel -->
 
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
 
 
   <footer class="footer">
